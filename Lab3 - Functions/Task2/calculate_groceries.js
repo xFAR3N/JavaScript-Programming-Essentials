@@ -6,7 +6,7 @@ function calculateSum(){
         alert("Please enter valid numbers.");
     }
     else{
-        var result = itemOne + itemTwo + itemThree;
+        let result = itemOne + itemTwo + itemThree;
         document.getElementById("result").innerText = `The sum of groceries is ${result} USD`;
     }
 }
