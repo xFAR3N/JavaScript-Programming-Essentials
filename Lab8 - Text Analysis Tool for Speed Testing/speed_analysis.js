@@ -18,22 +18,23 @@ function startTest(){
 function endTest(){
     endTime = new Date().getTime();
 
-    var timeElapsed = (endTime - startTime) / 1000;
-    var userTypedText = document.getElementById('userInput').value;
+    let timeElapsed = (endTime - startTime) / 1000;
+    let userTypedText = document.getElementById('userInput').value;
 
-    var typedWords = userTypedText.split(/\s+/).filter(function (word){
+    let typedWords = userTypedText.split(/\s+/).filter(function (word){
         return word !== "";
     }).length;
 
-    var wpm = 0;
+    let wpm = 0;
 
     if(timeElapsed !== 0 && !isNaN(typedWords)){
         wpm = Math.round((typedWords/timeElapsed) * 60);
     }
-
-    var outputDiv = document.getElementById("output");
+    let totalChar = userTypedText.length;   
+    let outputDiv = document.getElementById("output");
     outputDiv.innerHTML = `<h2>Typing Test Results: </h2>
     <p>Words Typed: ${typedWords}</p>
     <p>Time Elapsed: ${timeElapsed}</p>
-    <p>Words Per Minute(WPM): ${wpm}</p>`;
+    <p>Words Per Minute(WPM): ${wpm}</p>
+    <p>Total Length: ${totalChar}</p> `;
 }
