@@ -2,7 +2,7 @@ const colors = ['red', 'blue', 'green', 'purple', 'orange', 'pink', 'red', 'blue
 let cards = shuffle(colors.concat(colors));
 let selectedCards = [];
 let score = 0;
-let timeLeft = 30;
+let timeLeft = 60;
 let gameInterval;
 
 const startbtn = document.getElementById('startbtn');
@@ -37,6 +37,7 @@ function handleCardClick(){
     card.style.backgroundColor = card.dataset.color;
     selectedCards.push(card);
     if(selectedCards.length === 2){
+        gameContainer.removeEventListener("click", handleCardClick);
         setTimeout(checkMatch, 500);
     }
 }
@@ -56,9 +57,10 @@ function checkMatch() {
         card2.style.backgroundColor = '#ddd';
     }
     selectedCards = [];
+    gameContainer.addEventListener("click", handleCardClick);
 }
 function startGame() {
-    let timeLeft = 30;
+    let timeLeft = 60;
     startbtn.disabled = true;
     score = 0; // Reset score to zero
     scoreElement.textContent = `Score: ${score}`;
@@ -78,9 +80,10 @@ function startGameTimer(timeLeft) {
 
         if (timeLeft === 0) {
             clearInterval(gameInterval);
-            let timeLeft = 30;
+            let timeLeft = 60;
             alert('Game Over!');
             startbtn.disabled = false;
+            gameContainer.removeEventListener('click', handleCardClick);    
         }
     }, 1000);
 }
