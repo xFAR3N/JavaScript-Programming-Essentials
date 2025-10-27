@@ -1,0 +1,64 @@
+*{
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+}
+
+nav li{
+    list-style: none;
+    display: inline;
+}
+
+nav ul{
+    display: inline-block;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    font-size: 1.2rem;
+}
+
+nav a:hover{
+    background-color: #0c756d;
+    transition: ease 0.5s;
+}
+
+header h1{
+    color: white;
+}
+
+#searchbar{
+    display: flex;
+    background-color: white;
+    padding: 0.75em;
+    border-radius: 1rem;
+    width: 25%;
+}
+
+#keyword{
+    background-color: white;
+    border: none;
+}
+
+#keyword::placeholder{
+    color: #0c756d;
+    font-size: 0.9rem;
+}
+
+#searchbar button{
+    font-size: 1rem;
+    border: none;
+    background-color: #0c756d;
+    border-radius: 0.4em;
+    padding: 0.6em;
+}
