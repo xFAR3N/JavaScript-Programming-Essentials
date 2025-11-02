@@ -7,7 +7,7 @@ header{
     height: 100px;
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: #0c756d;
     align-items: center;
 }
 
@@ -27,9 +27,17 @@ nav a{
     border-radius: 0.5em;
     font-size: 1.2rem;
 }
-
+#logo img{
+    width: 50px;
+    color: white;
+}
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 nav a:hover{
-    background-color: #0c756d;
+    background-color: gray;
     transition: ease 0.5s;
 }
 
@@ -61,4 +69,91 @@ header h1{
     background-color: #0c756d;
     border-radius: 0.4em;
     padding: 0.6em;
+}
+
+aside img{
+    width: 50px;
+    margin-top: 1rem;
+}
+main{
+    display: flex;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    min-height: 600px;
+}
+#content{
+    margin-top: 5rem;
+    margin-left: 1rem;
+}
+
+#subtitle{
+    margin-top: 5rem;
+    width: 50%;
+    margin-left: 0;
+}
+
+#content button{
+    margin-top: 5rem;
+    border: none;
+    background-color: #0c756d;
+    padding: 1.5em;
+    border-radius: 0.4em;
+    color: white;
+}
+aside{
+    margin: 0px auto;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100px;
+}
+aside hr{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+#social-media{
+    display: flex;
+    flex-direction: column;
+}
+
+#content h1{
+    font-size: 4rem;
+    color: white;
+}
+#content p{
+    font-size: 1.5rem;
+    color: white;
+}
+
+#aboutus{
+    font-size: 1rem;
+}
+#team{
+    margin-top: 3rem;
+    display: flex;
+}
+
+#team-members{
+    border: 2px solid black;
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    background-color: aquamarine;
+    padding: 0.75rem;
+}
+
+#team-members p{
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    margin-top: 0.5em;
+}
+#role{
+    background-color: #0c756d;
+    border-radius: 0.25rem;
+    width: 50%;
+    margin-top: 0.75rem;
+    padding: 0.5rem;
+    text-align: center;
 }
